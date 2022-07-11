@@ -105,11 +105,11 @@ html {
 @media (prefers-color-scheme: light) {
     body {
         background-color: #FFFFFF !important;
-        color: white !important;
+        color: black !important;
     }
     section {
         background-color: #FFFFFF !important;
-        color: white !important;
+        color: black !important;
     }
     h1,
     h2,
