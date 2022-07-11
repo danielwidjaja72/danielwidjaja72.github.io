@@ -127,7 +127,7 @@ html {
     scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     body {
         background-color: #FFFFFF !important;
         color: white !important;
@@ -163,8 +163,8 @@ html {
         border: 1px solid white !important;
     }
     Text {
-        color: white !important;
-        fill: white !important;
+        color: black !important;
+        fill: black !important;
         text-shadow: none;
     }
     .sidenav {
