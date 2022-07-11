@@ -18,7 +18,7 @@ div,
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #FFFFFF;
+    background-color: #111;
     overflow-x: hidden;
     padding-top: 20px;
 }
@@ -27,7 +27,7 @@ div,
     padding: 0px 8px 6px 0px;
     text-decoration: none;
     font-size: 25px;
-    color: #000000; 
+    color: #818181;
     display: block;
 }
 
@@ -53,8 +53,9 @@ div,
 }
 
 .mix {
-    background: #66B2FF;
+    background: #fff;
     border: 2px solid black;
+    border-top: 0.5rem solid currentColor;
     border-radius: 10px;
     margin-bottom: 1rem;
     position: relative;
@@ -65,6 +66,23 @@ div,
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+
+/* .mix,
+.gap {
+    display: inline-block;
+    vertical-align: top;
+    /* margin-right:10px; */
+
+
+/* overflow: scroll; 
+
+
+}
+.mix,
+.gap {
+    /* width: calc(100%/4 - (((2 - 1) * 1rem) / 2)); 
+}
+*/
 
 .mix img {
     margin-top: 10px;
@@ -87,6 +105,13 @@ gap {
 }
 
 
+/* @media screen and (min-width: 1200px) {
+    .mix,
+    .gap {
+        width: calc(100%/6 - (((4 - 1) * 1rem) / 4)) !important;
+    }
+}
+
 @media screen and (min-width: 992px) {
     .mix,
     .gap {
@@ -102,14 +127,14 @@ html {
     scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
     body {
-        background-color: #FFFFFF !important;
-        color: black !important;
+        background-color: #121212 !important;
+        color: white !important;
     }
     section {
-        background-color: #FFFFFF !important;
-        color: black !important;
+        background-color: #121212 !important;
+        color: white !important;
     }
     h1,
     h2,
@@ -138,15 +163,15 @@ html {
         border: 1px solid white !important;
     }
     Text {
-        color: black !important;
-        fill: black !important;
+        color: white !important;
+        fill: white !important;
         text-shadow: none;
     }
     .sidenav {
-        background-color: #FFFFFF;
+        background-color: #000000;
     }
     .mix {
-        background: #FFFFFF;
+        background: #000000;
         /* border: 2px solid white; */
     }
 }
