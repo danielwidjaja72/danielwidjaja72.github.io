@@ -18,7 +18,7 @@ div,
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #FFF;
     overflow-x: hidden;
     padding-top: 20px;
 }
@@ -127,14 +127,14 @@ html {
     scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     body {
-        background-color: #121212 !important;
-        color: white !important;
+        background-color: #FFFFFF !important;
+        color: black !important;
     }
     section {
-        background-color: #121212 !important;
-        color: white !important;
+        background-color: #FFFFFF !important;
+        color: black !important;
     }
     h1,
     h2,
@@ -163,15 +163,15 @@ html {
         border: 1px solid white !important;
     }
     Text {
-        color: white !important;
+        color: black !important;
         fill: white !important;
         text-shadow: none;
     }
     .sidenav {
-        background-color: #000000;
+        background-color: #FFFFFF;
     }
     .mix {
-        background: #000000;
+        background: #FFFFFF;
         /* border: 2px solid white; */
     }
 }
