@@ -18,7 +18,7 @@ div,
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #FFFFFF;
     overflow-x: hidden;
     padding-top: 20px;
 }
@@ -53,7 +53,7 @@ div,
 }
 
 .mix {
-    background: #fff;
+    background: #000;
     border: 2px solid black;
     border-top: 0.5rem solid currentColor;
     border-radius: 10px;
@@ -129,11 +129,11 @@ html {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #121212 !important;
+        background-color: #FFFFFF !important;
         color: white !important;
     }
     section {
-        background-color: #121212 !important;
+        background-color: #FFFFFF !important;
         color: white !important;
     }
     h1,
