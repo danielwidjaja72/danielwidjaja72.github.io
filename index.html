@@ -1,362 +1,568 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Dimension by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+    <title>Daniel</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-search-pseudo-elements></script>
+    <link rel="icon" href="img/SanjayLogo.png">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-gem"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Daniel Widjaja</h1>
-								<p> Coding expert and top ranking mathematician<br />
-								Thomas Jefferson Highschool</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#work">Work</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+</head>
 
-				<!-- Main -->
-					<div id="main">
+<body>
+    <div style="position:fixed;top:5px;margin-left: 5px;z-index: 99999999999;"><button id="hide" class="btn btn-secondary" onclick="show()"><i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </button></div>
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-							</article>
+    <script>
+        state = true;
 
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-							</article>
+        function show() {
+            if (state) {
+                state = false;
+                document.getElementById("hide").innerHTML = '<i class="fa fa-bars" aria-hidden="true">';
+                document.getElementById("nav").style.opacity = "0";
+                document.getElementById("nav").style.transform = "translate(-160px)"
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
-							</article>
+                // document.getElementById("nav").style.display = "none";
+                document.getElementById("main").style.marginLeft = "0px";
 
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
+            } else {
+                state = true;
+                document.getElementById("hide").innerHTML = '<i class="fa fa-chevron-left" aria-hidden="true">';
+                // document.getElementById("nav").style.display = "inline";
+                document.getElementById("nav").style.opacity = "100";
+                document.getElementById("nav").style.transform = "translate(0px)"
 
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
 
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
+                document.getElementById("main").style.marginLeft = "160px";
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+            }
+        }
+    </script>
+    <div class="sidenav" id="nav">
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+        <center>
+            <img src="img/Seshan_014.jpg" style="object-fit:cover;border-radius:30%;width:90%;">
+            <a href="#sanjay"><b style="color:white">Daniel</b></a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#awards">Awards</a>
+            <a href="#contact">Contact</a>
+            <br>
 
-								<section>
-									<h3 class="major">Lists</h3>
+            <a target="_blank" href="https://github.com/danielwidjaja72">
+                <span class="fa-stack fa-sm">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+            <a target="_blank" href="https://www.linkedin.com/in/daniel-widjaja-b07604211/">
+                <span class="fa-stack fa-sm">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+            <a target="_blank" href="mailto:danielwidjaja72@gmail.com">
+                <span class="fa-stack fa-sm">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
+        </center>
 
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
+    </div>
 
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
+    <div class="main" id="main" style="margin-top:10px">
+        <div id="sanjay" style="border:5px solid grey;border-radius: 5px; ">
+            <h1 style="margin:10px;">Daniel</h1>
+        </div>
+        <br>
+        <div id='about' style="border:2px solid grey;border-radius: 5px; ">
+            <h2>About</h2>
+            <div style="margin-left: 20px;">
+                <!-- description: This is who I am -->
 
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
+                <p>My name is Daniel. I am ..................................</p>
 
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
+                <!-- I actively work with and am experienced with Java, Python, C, TensorFlow, SolidWorks, Raspberry Pi, Arduino, OpenCV, and Keras. -->
 
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
+                <p>I have been programming ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+                </p>
 
-							</article>
+                <p>I am avid math competitor</p>
 
-					</div>
+                <p>I also participated ....................
+                </p>
+            </div>
+        </div>
+        <br>
+        <div id='experience' style="border:2px solid grey;border-radius: 5px; ">
+            <h2>Experience</h2>
+            <div style="margin-left:20px;">
+                <h5>Education</h5>
+                <div style="margin-left:10px;">
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+                    <b>University .....</b>
+                    <ul>
+                        <li>Discrete Math</li>
+                        <li>Expected Graduation 2025</li>
+                    </ul>
 
-			</div>
+                    <b>Top High School</b>
+                    <ul>
+                        <li>Graduated with Highest Honors and Top Scholar Award
+                        </li>
+                        <li>Dual-Enrolled at Harvard University</li>
+                        <li>Graduated 2021</li>
+                    </ul>
+                </div>
+                <h5>Skills</h5>
+                <ul>
+                    <li>Java, Python, C, TensorFlow, SolidWorks, Raspberry Pi, Arduino, OpenCV, Keras, LEGO MINDSTORMS, Debian GNU/Linux</li>
+                </ul>
+                <h5>Relevant Coursework</h5>
+                <ul>
+                    <li>6.009 (MIT S22), Fundamentals of Programming</li>
+                    <li>6.004 (MIT S22), Computation Structures</li>
+                    <li>18.03 (MIT S22), Differential Equations</li>
+                    <li>6.006 (MIT F21), Introduction to Algorithms</li>
+                    <li>21-259 (CMU Su21), Multivariable Calculus</li>
+                    <li>15-122 (CMU S21), Principles of Imperative Computing</li>
+                    <li>21-127 (CMU S21), Discrete Math/Math for CS</li>
+                    <li>15-112 (CMU F20), Fundamentals of Programming in Python</li>
+                </ul>
+                <h5>Work and Research</h5>
+                <div style="margin-left: 10px;">
+                    <b>Software Engineering Intern at Emerald Innovations -- Cambridge, MA</b>
+                    <br> May 2022 - August 2022
+                    <ul>
+                        <!-- <li></li> -->
 
-		<!-- BG -->
-			<div id="bg"></div>
+                    </ul>
+                    <b>Intern at Carnegie Mellon University -- Pittsburgh, PA</b>
+                    <br> June 2019 - January 2021
+                    <ul>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+                        <li>Collaborated with Prof. Mayank Goel (SmaSH lab) to create an inexpensive, lightweight, wearable assistive device that can measure hand or finger movements accurately enough to identify a range of hand gestures.</li>
+                        <li>Designed, created, and tested physical prototypes to test overall hardware performance</li>
+                        <li>Implemented and evaluated two software approaches for gesture recognition: The first uses an algorithm that combines moving averages of sensor readings with gesture sensor reading signatures to determine the current gesture. The
+                            second uses a neural network trained on a labelled set of gesture readings to recognize gestures.</li>
+                    </ul>
+                    <b>Product Development Consultant at The LEGO Group -- Billund, Denmark</b><br> June 2016 - 2022
+                    <ul>
+                        <!-- <li></li> -->
+                        <li> Alpha and beta-tested both hardware and software products under NDA</li>
+                        <li> Designed two robots for the official LEGO MINDSTORMS App released in 2021</li>
+                    </ul>
+                    <b>Independent Research -- Pittsburgh, PA</b><br> August 2018 - June 2019
+                    <ul>
+                        <!-- <li></li> -->
+                        <li> Developed a system that combines on-vehicle and infrastructure-based sensors to provide a more complete view of the environment, including areas not visible from the vehicle.</li>
+                        <li>Developed custom vision recognition system, sensor fusion model, and networking protocol design for system.</li>
+                        <li>Built a small-scale experimental testbed as a proof of concept.</li>
+                        <li>Presented work at Intel International Science and Engineering Fair in Phoenix, AZ.</li>
+                    </ul>
+                </div>
+            </div>
 
-	</body>
+        </div>
+        <br>
+        <div id='projects' style="border:2px solid grey;border-radius: 5px; ">
+            <h2>Projects</h2>
+            <div class="">
+                <div class="col-lg-12 col-md-10 mx-auto">
+
+                    <!-- background: 'img/bg-portfolio.jpg' -->
+
+                    <link href="css/style.css" rel="stylesheet">
+                    <!-- <link href="css/reset.css" rel="stylesheet"/> -->
+
+                    <div class="controls mixitup-control-active" data-sort="random">
+                        <center>
+
+                            <!-- <button type="button" class="control mixitup-control-active" data-filter="all">All</button>
+                <button type="button" class="control" data-filter=".blue">LEGO</button>
+                <button type="button" class="control" data-filter=".green">Tutorials</button>
+                <button type="button" class="control" data-filter=".pink">FIRST Apps</button>
+                <button type="button" class="control" data-filter=".yellow">FIRST Robotics</button>
+                <button type="button" class="control" data-filter=".purple">Science Research</button> -->
+                        </center>
+
+                        <!-- <button type="button" class="control" data-sort="default:asc">Asc</button>
+                <button type="button" class="control" data-sort="default:desc">Desc</button> -->
+                    </div>
+
+                    <div class="pcontainer" id="MixItUpAC0232" style="">
+                        <!-- <div class="mix green">
+                    <center>
+                        <a target="_blank" href="http://www.primelessons.org">
+                            <img src="img/portfolio/PrimeLessons.png" width="90%" alt="">
+                            <h4>SPIKE Prime</h4>
+                            <p>Launched in 2020, this site has 11,500 users. Tutorials to learn to program SPIKE Prime in Scratch and MicroPython. Available in 7 languages.</p>
+                        </a>
+                    </center>
+                </div> -->
+
+                        <!-- <div class="mix green">
+                    <center>
+                        <a target="_blank" href="http://www.flltutorials.com">
+                            <img src="img/portfolio/FLLTutorials.png" width="90%" alt="">
+                            <h4>FIRST LEGO League</h4>
+                            <p>Collaborative website with tutorials and tools to help FIRST LEGO League teams. Used by over 250,000. </p>
+                        </a>
+                    </center>
+                </div> -->
+
+                        <!-- <div class="mix pink">
+                    <center>
+                        <a target="_blank" href="https://flltutorials.com/Resources/2020/rubrics/index.html?lang=en">
+                            <img src="img/portfolio/Rubrics.png" width="90%" alt="">
+                            <h4>RePLAY Rubric</h4>
+                            <p>In 2020, I created a Rubric Tool for teams. This is being used by several FIRST regions.</p>
+                        </a>
+                    </center>
+                </div> -->
+
+                        <!-- <div class="mix pink">
+                        <center>
+                            <a target="_blank" href="https://flltutorials.com/Resources/2020/drawplan/index.html">
+                                <img src="img/portfolio/Planner.png" width="90%" alt="">
+                                <h4>Strategy Planner</h4>
+                                <p>Since 2014, I have created this planning App for teams.</p>
+                            </a>
+                        </center> -->
+                        <div class="mix pink" style="">
+                            <center>
+                                <a target="_blank" href="https://tournament.flltutorials.com/">
+                                    <img src="img/portfolio/Rubrics.png" width="40%" alt="">
+                                    <h4>FLL Tournament Management System</h4>
+                                </a>
+                                <p>Used by the Virtual Open Invitational, FIRST British Columbia, New Jersey, Moscow, and others to manage FIRST LEGO League competitions. It manages teams, referees, and judges within a single web-based system.</p>
+
+                            </center>
+                        </div>
+                        <div class="mix purple" style="">
+                            <center>
+                                <a target="_blank" href="https://arxiv.org/abs/2009.03458 ">
+                                    <img src="img/portfolio/SensorFusion.png" width="90%" alt="">
+                                    <h4>Sensor Fusion for Autonomous Vehicles</h4>
+                                </a>
+                                <p>Intel ISEF Finalist award.</p>
+
+                            </center>
+                        </div>
+                        <div class="mix green" height="" style="">
+                            <center>
+                                <a target="_blank" href="http://www.ev3lessons.com">
+                                    <img src="img/portfolio/EV3Lessons.png" width="90%" alt="">
+                                    <h4>LEGO MINDSTORMS</h4>
+                                </a>
+                                <p>Launched in 2014. The #1 resource for learning to program the EV3 (in Labview and Scratch). Over 800,000 users. Available in 12 languages.</p>
+
+                            </center>
+                        </div>
+                        <div class="mix purple" style="">
+                            <center>
+                                <a target="_blank" href="https://arxiv.org/abs/2009.13322">
+                                    <img src="img/portfolio/lite.jpg" width="90%" alt="">
+                                    <h4>A wearable, optical-fiber gesture recognition system</h4>
+                                </a>
+                                <p>Regeneron STS Submission</p>
+
+                            </center>
+                        </div>
+                        <div class="mix pink" style="">
+                            <center>
+                                <a target="_blank" href="https://virtual.fchacks.org/">
+                                    <img src="https://virtual.fchacks.org/fchacks-logo.svg" width="90%" alt="">
+                                    <h4>Hackathon Management System</h4>
+                                </a>
+                                <p>Designed for use by the FCHacks Hackathon to manage team registrations, submissions, and judge evaluations (Main FCHacks website can be found <a target="_blank" href="https://www.fchacks.org/">here</a>).</p>
+
+                            </center>
+                        </div>
+                        <div class="mix purple" style="">
+                            <center>
+                                <a target="_blank" href="https://www.sciencenewsforstudents.org/article/teen-identifies-way-detect-failing-underground-pipes">
+                                    <img src="img/portfolio/WaterMain.png" width="90%" alt="">
+                                    <h4>Monitoring Water Pipe Structural Health</h4>
+                                </a>
+                                <p>Broadcom MASTERS Finalist award.</p>
+
+                            </center>
+                        </div>
+                        <div class="mix pink" style="">
+                            <center>
+                                <a target="_blank" href="https://flltools.flltutorials.com/">
+                                    <img src="img/portfolio/RePLAY.png" width="90%" alt="">
+                                    <h4>FLL Scorer &amp; Tools</h4>
+                                </a>
+                                <p>Since 2015, I have created an annual scoring App used by 50,000/yr. Available on iOS and Android App Stores.</p>
+
+                            </center>
+                        </div>
+                        <div class="mix green" style="">
+                            <center>
+                                <a target="_blank" href="https://www.facebook.com/groups/FLLShareandLearn/">
+                                    <img src="img/portfolio/FLL.png" width="90%" alt="">
+                                    <h4>FLL Challenge: Share and Learn</h4>
+                                </a>
+                                <p>One of 4 Share &amp; Learn community groups that bring together 10,000 coaches/volunteers.
+                                </p>
+
+                            </center>
+                        </div>
+                        <!-- </div> -->
+
+                        <!-- <div class="mix pink">
+                    <center>
+                        <a target="_blank" href="https://github.com/sanjayseshan/spikeprime-precompiler/releases">
+                            <img src="img/portfolio/RAMSaver.png" width="90%" alt="">
+                            <h4>SPIKE Prime RAM Saver</h4>
+                            <p>Created in 2020 to help teams overcome space limitations in SPIKE Prime</p>
+                        </a>
+                    </center>
+            </div> -->
+
+                        <div class="mix pink">
+                            <center>
+                                <a target="_blank" href="https://github.com/sanjayseshan/spikeprime-vscode">
+                                    <img src="img/portfolio/VSCode.png" width="90%" alt="">
+                                    <h4>SPIKE Prime VSCode Extension</h4>
+                                </a>
+                                <p>Created in 2020 to help teams upload Python code to SPIKE Prime</p>
+
+                            </center>
+                        </div>
+
+                        <div class="mix blue">
+                            <center>
+                                <a target="_blank" href="https://www.facebook.com/watch/?v=2707195376264589">
+                                    <img src="img/portfolio/Pix3lPlott3r.jpg" width="90%" alt="">
+                                    <h4>DIY Dot Matrix Photo Printer</h4>
+                                </a>
+                                <p>First LEGO photo booth printer with Raspberry Pi interface</p>
+
+                            </center>
+                        </div>
+
+                        <div class="mix blue">
+                            <center>
+                                <a target="_blank" href="https://youtu.be/jslYbiKfCGQ">
+                                    <img src="img/portfolio/3Dprinter.jpg" width="90%" alt="">
+                                    <h4>DIY 3D Printer</h4>
+                                </a>
+                                <p>First LEGO 3D Printer to take G-Code and feature a full-sized print bed and RPi.
+                                </p>
+
+                            </center>
+                        </div>
+
+                        <div class="mix blue">
+                            <center>
+                                <a target="_blank" href="https://www.facebook.com/watch/?v=2275925059311931">
+                                    <img src="img/portfolio/pacbot.jpg" width="90%" alt="">
+                                    <h4>Multiplayer Arcade Games</h4>
+                                </a>
+                                <p>First multiplayer MINDSTORMS game with 12 networked robots and RPi</p>
+
+                            </center>
+                        </div>
+
+                        <!-- <div class="mix yellow">
+                    <center>
+                        <a target="_blank" href="https://github.com/droidsrobotics/FRC-tracking-2019-offseason">
+                            <img src="img/portfolio/FRCVision.jpg" width="90%" alt="">
+                            <h4>Custom Vision Processing</h4>
+                            <p>Used in FIRST Robotics Competition Robot in 2019-2020.</p>
+                        </a>
+                    </center>
+                </div> -->
+
+                        <div class="mix yellow">
+                            <center>
+                                <a target="_blank" href="https://github.com/sanjayseshan/exercise-helper">
+                                    <img src="https://github.com/sanjayseshan/exercise-helper/raw/master/v1.png?raw=true" width="90%" alt="">
+                                    <h4>Personal Exercise Trainer Using ML</h4>
+                                </a>
+                                <p>Used for FIRST Robotics Competition Team 8027 Innovation Challenge project.</p>
+
+                            </center>
+                        </div>
+
+
+
+                        <div class="gap"></div>
+                        <div class="gap"></div>
+                    </div>
+
+                    <br> Project code can be found on my <a target="_blank" href="https://github.com/sanjayseshan">GitHub</a> when applicable.
+                    <br><br>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id='awards' style="border:2px solid grey;border-radius: 5px; ">
+            <h2>Awards</h2>
+
+            <div class="panel-group" id="accordion" style="margin-left:20px; line-height: initial;">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <b>2020</b>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse show in">
+                        <div class="panel-body">
+                            <p class="panel-list">President's National Service Award (Gold Medal)</p>
+                            <p class="panel-list">National Merit Scholarship Commendation (Top 3%) </p>
+                            <!-- <p class="panel-list">Volunteer of the Year: Virtual Open Invitational</p> -->
+                            <p class="panel-list">Qualified: FIRST World Championships (Cancelled due to COVID-19)
+                            </p>
+                            <!-- <p class="panel-list">Qualified: PJAS States (Cancelled due to COVID-19)</p> -->
+                            <!-- <p class="panel-list">PRSEF: Cancelled due to COVID-19</p> -->
+                            <p class="panel-list">PJAS: First Place Engineering Region 7, PJAS Director's Award, Sister Maze Award</p>
+                            <p class="panel-list">FIRST Robotics Competition Regional Rookie All-star Award (Dayton, OH)
+                            </p>
+                            <!-- <p class="panel-list">FIRST Robotics Dean's List Semi-Finalist</p> -->
+                            <p <="" div="">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <b>2019</b>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse show">
+                            <div class="panel-body">
+                                <p class="panel-list">Intel International Science and Engineering Fair (ISEF) Finalist
+                                </p>
+                                <p class="panel-list">PJAS States: First Place Engineering PA States</p>
+                                <p class="panel-list">PJAS: First Place Engineering Region 7, Carnegie Mellon University Civil and Engineering Department Chi Epsilon award</p>
+                                <p class="panel-list">PRSEF: Intel ISEF Finalist Award, FedEx Ground Award, Third Place Senior Division Robotics/Engineering </p>
+                                <p class="panel-list">Finalist Alliance at FIRST Robotics Competition MVRC (Warren, OH)
+                                </p>
+                                <!-- <p class="panel-list">FIRST Nomination for Apple Engineering Technology Camp (top 75/1000)</p> -->
+                                <p class="panel-list"></p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <b>2018</b>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse show">
+                            <div class="panel-body">
+                                <p class="panel-list">Tournament Champion, FIRST LEGO League World Championship (Top 1/40,000)
+                                </p>
+                                <p class="panel-list">Commendation from Tom Wolf, Governor of Pennsylvania</p>
+                                <!-- <p class="panel-list">Proclamation from Allegheny County Pennsylvania</p> -->
+                                <p class="panel-list">PRSEF: Second Place Senior Division Robotics/Engineering, FedEx Ground Award, Harrisburg University of Science &amp; Technology Award, Innovation Works Award</p>
+                                <p class="panel-list">PJAS State: First Place Perfect Award Engineering PA States, Director's Engineering Award</p>
+                                <p class="panel-list">PJAS: First Place Engineering Region 7, Innovation Works Award, an American Vacuum Society-Western PA Chapter Award, and an American Society of Civil Engineers Award</p>
+                                <p class="panel-list">Provisional Patent: Methods of and Apparatus for Monitoring of Water Pipe Structural Health</p>
+                                <p class="panel-list"></p>
+                                <p class="panel-list"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <b>2017</b>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse show">
+                            <div class="panel-body">
+                                <p class="panel-list">Minor Planet 33762 named Sanjayseshan</p>
+                                <p class="panel-list">Broadcom MASTERS National Finalist (Top 30/80,000) science fair project award</p>
+                                <p class="panel-list">Coach/Mentor of the Year, FIRST LEGO League World Championship
+                                </p>
+                                <p class="panel-list">Named MINDSTORMS Community Partner by the LEGO Group</p>
+                                <p class="panel-list">PRSEF: Broadcom MASTERS nomination, Third Place Earth, Space and Environment, Allegheny County Health Department Award, Arconic Foundation Award
+                                </p>
+                                <p class="panel-list">State Champion's Award (1st place), Robot Performance (1st place) FIRST LEGO League</p>
+                                <p class="panel-list"></p>
+                                <p class="panel-list"></p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a target="_blank" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" href="#collapseThree">2016</a>
+                    </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse show">
+                    <div class="panel-body">
+                      <p class="panel-list">First Place Programming, FIRST LEGO League World Championship</p>
+                      <p class="panel-list">Global Innovation Award (Top 20/40,000)</p>
+                        <p class="panel-list">Coach of State Championâ€™s Award (1st place) FIRST LEGO League</p>
+                          <p class="panel-list">Provisional Patent: Methods of and Apparatus for Sorting Batteries and Methods for Marking Batteries</p>
+                            <p class="panel-list"></p>
+                    </div>
+                  </div>
+                </div> -->
+                    <!--               
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a target="_blank" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" href="#collapseThree">Earlier</a>
+                    </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse show">
+                    <div class="panel-body">
+                      <p class="panel-list">2015: Tournament Champion (1st place), FIRST LEGO League World Invitational</p>
+                      <p class="panel-list">2014: First Place Innovative Solution Research Project, FIRST LEGO League World Invitational</p>
+                      <p class="panel-list">2015: State Championâ€™s Award (1st place), Robot Performance (1st place) FIRST LEGO League</p>
+                      <p class="panel-list">2014: State Championâ€™s Award (2nd place), Robot Performance (1st place) FIRST LEGO League</p>
+                      <p class="panel-list">2013: State Championâ€™s Award (1st place), Robot Performance (1st place) FIRST LEGO League</p>
+                      <p class="panel-list">2012: State Championâ€™s Award (2nd place), Robot Performance (2nd place) FIRST LEGO League</p>
+                      <p class="panel-list">2011: State Championâ€™s Award (3rd place), Robot Performance (1st place) FIRST LEGO League</p>
+                      <p class="panel-list"></p>
+                      <p class="panel-list"></p>
+                    </div>
+                  </div>
+                </div>
+               -->
+                </div>
+
+                <!-- </div> -->
+
+
+
+
+            </div>
+        </div>
+        <br>
+        <div id='contact' style="border:2px solid grey;border-radius: 5px; ">
+            <h2>Contact</h2>
+            <p style="margin-left: 20px;"> Feel free to reach out to me at <a target="_blank" href="mailto:seshan@mit.edu">seshan@mit.edu</a>.</p>
+        </div>
+        <br>
+        <!-- <br><br> -->
+
+</body>
+
 </html>
