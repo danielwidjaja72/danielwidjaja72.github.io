@@ -49,6 +49,11 @@ div,
     fill: yellow;
     background-color: yellow;
 }
+
+.main #experience {
+    fill: blue;
+    background-color: blue;
+}
     
 @media screen and (max-height: 450px) {
     .sidenav {
