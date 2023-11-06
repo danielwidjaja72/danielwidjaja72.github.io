@@ -42,6 +42,7 @@ div,
 
 #daniel {
     fill: green;
+    background-color: green;
 }
 
 @media screen and (max-height: 450px) {
