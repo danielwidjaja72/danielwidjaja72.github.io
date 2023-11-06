@@ -40,7 +40,7 @@ div,
     padding: 0px 10px;
 }
 
-#daniel {
+.main #daniel {
     fill: green;
     background-color: green;
 }
