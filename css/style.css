@@ -45,6 +45,12 @@ div,
     background-color: green;
 }
 
+.mail #about {
+    fill: yellow;
+    background-color: yellow;
+}
+    
+
 .main #about {
     background-color: yellow;
 } 
