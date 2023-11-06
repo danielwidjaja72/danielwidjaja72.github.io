@@ -45,6 +45,10 @@ div,
     background-color: green;
 }
 
+.main #about {
+    background-color: yellow;
+} 
+
 @media screen and (max-height: 450px) {
     .sidenav {
         padding-top: 15px;
